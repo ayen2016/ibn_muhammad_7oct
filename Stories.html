@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>About | Ibn Muhammad</title>
+<meta name="description" content="About Ibn Muhammad: Purpose, Vision, Insights, Personal Perspectives">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #0B3857; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* Header */
+.header {
+    width: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.header.scrolled { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.logo { font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
+
+/* Navbar */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-menu li a { font-weight: 500; padding: 0.25rem 0.5rem; }
+.nav-menu li a.active { color: #FDB812; }
+
+/* Hamburger button */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 8rem 1rem 4rem;
+    text-align: center;
+    background: url('img/Hero\ image.jpg') center/cover no-repeat;
+    color: white;
+}
+.hero-title { font-size: 3rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; }
+.hero-subtitle { font-size: 1.25rem; margin-bottom: 2rem; }
+
+/* Sections */
+.section { padding: 4rem 1rem; }
+.section-title { text-align: center; font-size: 2rem; margin-bottom: 2rem; font-weight: 700; }
+
+/* Who is Ibn Muhammad Section */
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+.welcome-text h3 { font-size: 2rem; margin-bottom: 1rem; }
+.welcome-text p { margin-bottom: 1rem; }
+.welcome-image img {
+    width: 100%;
+    /* border-radius: 10px; */
+    object-fit: cover;
+}
+
+/* Publications Section like Popular Works */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.work-card {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    background: #fff;
+    text-align: center;
+}
+.work-image img {
+    width: 100%;
+    display: block;
+}
+.work-content {
+    padding: 1rem;
+}
+.work-content h4 a {
+    color: #0B3857;
+    font-weight: 600;
+}
+
+
+/* Footer */
+.footer { background: #0B3857; color: white; padding: 2rem 1rem; text-align: center; }
+.footer-links a { color: white; margin: 0 0.5rem; font-weight: 500; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .welcome-container { grid-template-columns: 1fr; }
+    .mobile-menu-btn { display: block; }
+    .nav-menu { 
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-book-open"></i>
+            Ibn Muhammad
+        </div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Articles.html">Articles</a></li>
+                <li><a href="#">Biography</a></li>
+                <li><a href="Stories.html">Stories</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">About Ibn Muhammad</h1>
+        <p class="hero-subtitle">Insights, purpose, and perspectives that matter</p>
+    </section>
+
+   <!-- Hero Section -->
+
+
+<!-- Publications Section -->
+    
+
+<section class="section our_latest_publication">
+  <div class="our_latest_container">
+    <h2 class="section-title">Our Latest Publications</h2>
+
+    <div class="publications-grid">
+      <!-- Card 1 -->
+      <div class="our_latest_card">
+        <div class="our_latest_image">
+          <img src="img/family imga.jpg" alt="Family">
+        </div>
+        <div class="our_latest_content">
+          <h4>Family</h4>
+          <a href="#" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+
+      
+
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+   .our_latest_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #0B3857;
+  margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center; /* center single card */
+}
+
+/* Cards */
+.our_latest_card {
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  max-width: 350px; /* prevent full width on single card */
+  margin: 0 auto; /* center card */
+}
+
+.our_latest_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.our_latest_image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.our_latest_card:hover .our_latest_image img {
+  transform: scale(1.05);
+}
+
+.our_latest_content {
+  padding: 1rem;
+}
+
+.our_latest_content h4 {
+  font-size: 1.2rem;
+  color: #0B3857;
+  margin-bottom: 0.5rem;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #FDB812;
+  color: #0B3857;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #0B3857;
+  color: #FDB812;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .our_latest_content h4 {
+    font-size: 1rem;
+  }
+  .read-more-btn {
+    padding: 0.4rem 0.8rem;
+  }
+  .our_latest_card {
+    max-width: 100%; /* let cards be full width on small screens */
+  }
+}
+
+</style>
+
+
+<!-- Publications Section -->
+
+
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Website Terms</a>
+    </div>
+    <p>Copyright © 2023 Ibn Muhammad</p>
+
+</footer>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenuBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        if(navMenu.style.display === 'flex'){
+            navMenu.style.display = 'none';
+        } else {
+            navMenu.style.display = 'flex';
+        }
+    });
+
+    document.addEventListener('click', function(event){
+        if(!event.target.closest('.header')){
+            navMenu.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('resize', function(){
+        if(window.innerWidth > 992){
+            navMenu.style.display = 'flex';
+        } else {
+            navMenu.style.display = 'none';
+        }
+    });
+});
+
+</script>
+
+
+</body>
+</html>

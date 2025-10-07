@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Home | Ibn Muhammad</title>
+<meta name="description" content="Family | Love | Compassion | Empathy | Respect | Communication | Leadership | Socialising | Loneliness | Neglect">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<style>
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body {
+  font-family:'Poppins',sans-serif;
+  line-height:1.6;
+  color:#0B3857;
+}
+a {
+  text-decoration:none;
+  color:inherit;
+}
+img {
+  max-width:100%;
+  display:block;
+}
+
+
+
+.header {
+    width: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.header.scrolled { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.logo { 
+    
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    display: flex; 
+    align-items: center; gap: 0.5rem; 
+    
+
+}
+
+
+
+
+/* Navbar */
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-menu li a { font-weight: 500; padding: 0.25rem 0.5rem; }
+.nav-menu li a.active { color: #FDB812; }
+
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    padding: 8rem 1rem 4rem;
+    text-align: center;
+    background: url('img/Hero\ image.jpg') center/cover no-repeat;
+    color: white;
+}
+.hero-title { font-size: 3rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; }
+
+.hero-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+.keyword {
+    background: rgba(0,0,0,0.5);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+.btn-hero {
+    display: inline-block;
+    background: #FDB812;
+    color: #0B3857;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* welcome section */
+
+.section { padding: 4rem 1rem; }
+.section-title { text-align: center; font-size: 2rem; margin-bottom: 2rem; font-weight: 700; }
+
+
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+.welcome-text h3 { font-size: 2rem; margin-bottom: 1rem; }
+.featured-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+
+.featured-item { 
+
+
+    position: relative;
+   
+    overflow: hidden; 
+  
+
+}
+.featured-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+.featured-overlay h4 { margin-bottom: 0.5rem; }
+
+.featured-overlay a { color: #FDB812; font-weight: 600; }
+
+
+
+/* Popular Works */
+
+.works-container, .publications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+.works-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 1.5rem; 
+}
+.work-card { 
+    overflow: hidden; 
+    /* border-radius: 10px;  */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+    background: #fff;
+}
+.work-content { 
+    padding: 1rem; 
+    text-align: center; 
+}
+.work-content h4 a { 
+    color: #0B3857; 
+    font-weight: 600; 
+}
+
+
+/* Popular Works */
+
+
+
+/* Newsletter */
+
+
+.newsletter-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.newsletter-form { display: flex; margin-top: 1rem; gap: 0.5rem; }
+.newsletter-form input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.newsletter-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #FDB812;
+    color: #0B3857;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+
+.footer { background: #0B3857; color: white; padding: 2rem 1rem; text-align: center; }
+.footer-links a { color: white; margin: 0 0.5rem; font-weight: 500; }
+
+/* Responsive */
+
+
+@media (max-width: 992px) {
+    .welcome-container { grid-template-columns: 1fr; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .mobile-menu-btn { display: block; }
+    .nav-menu { 
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-book-open"></i>
+            Ibn Muhammad
+        </div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Articles.html">Articles</a></li>
+                <li><a href="#">Biography</a></li>
+                <li><a href="Stories.html">Stories</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<main>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+        <h1 class="hero-title">Ibn Muhammad</h1>
+        <div class="hero-keywords">
+            <span class="keyword">Family</span>
+            <span class="keyword">Love</span>
+            <span class="keyword">Compassion</span>
+            <span class="keyword">Empathy</span>
+            <span class="keyword">Respect</span>
+            <span class="keyword">Communication</span>
+            <span class="keyword">Leadership</span>
+            <span class="keyword">Socialising</span>
+            <span class="keyword">Loneliness</span>
+            <span class="keyword">Neglect</span>
+        </div>
+        <a href="#" class="btn-hero">Explore Our Works</a>
+    </section>
+
+    <!-- Welcome Section -->
+
+    <section class="section welcome">
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h3>Welcome</h3>
+                <p>Thank you for visiting Ibn Muhammad, where we hope you will find important topics that are not often spoken about in our communities, or just general good-feeling topics that should benefit us all, including the authors.</p>
+                <p>Ibn Muhammad is here to give an insight into the dynamics of a person's life, how to possibly navigate those. We hope you find the website beneficial.</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <img src="img/a good man square.png" alt="A Good Man">
+                    <div class="featured-overlay">
+                        <h4>A Good Man</h4>
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="img/Family square.png" alt="Family">
+                    <div class="featured-overlay">
+                        <h4>Family</h4>
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Works -->
+
+    <section class="section popular-works">
+        <div class="works-container">
+            <h2 class="section-title">Our Popular Works</h2>
+            <div class="works-grid">
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="img/Family square.png" alt="Family">
+                    </div>
+                    <div class="work-content">
+                        <h4><a href="#">Family</a></h4>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="img/Love image.jpg" alt="Love">
+                    </div>
+                    <div class="work-content">
+                        <h4><a href="#">Love</a></h4>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="img/Social Interaction.jpg" alt="Social Interaction">
+                    </div>
+                    <div class="work-content">
+                        <h4><a href="#">Social Interaction</a></h4>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-image">
+                        <img src="img/Cause.jpg" alt="Causes">
+                    </div>
+                    <div class="work-content">
+                        <h4><a href="#">Causes</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+<!-- Our Latest Publication -->
+
+<section class="section our_latest_publication">
+  <div class="our_latest_container">
+    <h2 class="section-title">Our Latest Publications</h2>
+
+    <!-- Swiper -->
+    <div class="swiper latest-publications-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide our_latest_card">
+          <div class="our_latest_image">
+            <img src="img/Traveling.jpg" alt="Family">
+          </div>
+          <div class="our_latest_content">
+            <h4>Traveling</h4>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide our_latest_card">
+          <div class="our_latest_image">
+            <img src="img/Daughter in law.jpg" alt="Love">
+          </div>
+          <div class="our_latest_content">
+            <h4>Daughter In Law</h4>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide our_latest_card">
+          <div class="our_latest_image">
+            <img src="img/Social Interaction.jpg" alt="Social Interaction">
+          </div>
+          <div class="our_latest_content">
+            <h4>Social Interaction</h4>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide our_latest_card">
+          <div class="our_latest_image">
+            <img src="img/Cause.jpg" alt="Causes">
+          </div>
+          <div class="our_latest_content">
+            <h4>Causes</h4>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<!-- Styles -->
+<style>
+.our_latest_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Cards */
+.our_latest_card {
+  background: #fff;
+  /* border-radius: 10px; */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.our_latest_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.our_latest_image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.our_latest_card:hover .our_latest_image img {
+  transform: scale(1.1);
+}
+
+.our_latest_content {
+  padding: 1rem;
+}
+.our_latest_content h4 {
+  font-size: 1.2rem;
+  color: #0B3857;
+  margin-bottom: 0.5rem;
+}
+.read-more-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #FDB812;
+  color: #0B3857;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.read-more-btn:hover {
+  background: #0B3857;
+  color: #FDB812;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background: #FDB812;
+  color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #0B3857;
+  color: #FDB812;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.swiper-pagination-bullet {
+  background: #0B3857;
+  opacity: 0.7;
+}
+.swiper-pagination-bullet-active {
+  background: #FDB812;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .swiper-button-prev { left: 5px; }
+  .swiper-button-next { right: 5px; }
+}
+</style>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper('.latest-publications-swiper', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  breakpoints: {
+    0: { slidesPerView: 1, spaceBetween: 15 },
+    500: { slidesPerView: 1, spaceBetween: 15 },
+    768: { slidesPerView: 2, spaceBetween: 20 },
+    992: { slidesPerView: 3, spaceBetween: 30 }
+  }
+});
+</script>
+
+<!-- Our latest publication -->
+
+
+
+<!-- Newsletter Section -->
+
+
+    <section class="section newsletter">
+        <div class="newsletter-container">
+            <h2>Newsletter Signup</h2>
+            <p>Subscribe for the Updates!</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+<!-- Newsletter Section -->
+
+</main>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Website Terms</a>
+    </div>
+    <p>Copyright © 2023 Ibn Muhammad</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenuBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        if(navMenu.style.display === 'flex'){
+            navMenu.style.display = 'none';
+        } else {
+            navMenu.style.display = 'flex';
+        }
+    });
+
+    document.addEventListener('click', function(event){
+        if(!event.target.closest('.header')){
+            navMenu.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('resize', function(){
+        if(window.innerWidth > 992){
+            navMenu.style.display = 'flex';
+        } else {
+            navMenu.style.display = 'none';
+        }
+    });
+});
+
+</script>
+
+
+
+
+</body>
+</html>
