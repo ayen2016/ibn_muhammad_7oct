@@ -314,13 +314,13 @@ img { max-width: 100%; display: block; }
 </footer>
 
 <script>
-
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
 
+    // Toggle mobile menu
     mobileMenuBtn.addEventListener('click', function(e){
-        e.stopPropagation();
+        e.stopPropagation(); // Prevent click from bubbling
         if(navMenu.style.display === 'flex'){
             navMenu.style.display = 'none';
         } else {
@@ -328,12 +328,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Click outside to close menu
     document.addEventListener('click', function(event){
-        if(!event.target.closest('.header')){
+        const isClickInsideHeader = event.target.closest('.header');
+        const isSwiperButton = event.target.closest('.swiper-button-next, .swiper-button-prev');
+
+        if(!isClickInsideHeader && !isSwiperButton){
             navMenu.style.display = 'none';
         }
     });
 
+    // Reset menu on window resize
     window.addEventListener('resize', function(){
         if(window.innerWidth > 992){
             navMenu.style.display = 'flex';
@@ -342,9 +347,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
 </script>
+
+
 
 
 </body>
 </html>
+
